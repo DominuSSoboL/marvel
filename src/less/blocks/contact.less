@@ -1,0 +1,218 @@
+/**************************************************************
+*                                                             *
+*                   OTHER DECORATION BLOCK                    *
+*                                                             *
+**************************************************************/
+#contact {
+	background: #f0f0f0 url('../../img/contact/map.png')no-repeat;
+	background-size: 100%;
+	background-position: center bottom 18%;
+	padding: 120px 0 127px;
+}
+/**************************************************************
+*                                                             *
+*                   OTHER DECORATION BLOCK                    *
+*                                                             *
+**************************************************************/
+// If user have off js
+#contact.offJS {
+	// EMAIL BLOCK
+	#contactFormFooterSection {
+		display: none;
+	}
+	// ERROR BLOCK
+	.error-block {
+		display: block;
+	}
+}
+
+// If user have on JS this block hidden
+/** ERROR **/
+.error-block {
+	display: none;
+	text-align: center;
+	h2 {
+		.font('Montserrat',40px,900);
+		color: red;
+	}
+	p {
+		.font('Montserrat',20px,400);
+	}
+	ul {
+		padding-top: 20px;
+		li {
+			.font('Montserrat',20px,700);
+			margin-top: 20px;
+		}
+	}
+}
+/**************************************************************
+*                                                             *
+*                            TITLE                            *
+*                                                             *
+**************************************************************/
+.section-title.contact-title {
+	margin-bottom: 170px;
+	h2 {
+		color: #e5e5e5;
+	}
+	p.section-title__sub-title {
+		color: #010101;
+	}
+}
+/**************************************************************
+*                                                             *
+*                  CONTACT FORM SECTION                       *
+*                                                             *
+**************************************************************/
+#contactFormFooterSection {
+	form#contactFormFooter {
+		input, textarea {
+			width: 100%;
+			margin-bottom: 21px;
+			padding: 20px 0 22px 20px;
+			box-sizing: border-box;
+			border: 1px solid #dedede;
+			transition: 0.3s;
+			color: #808080;
+			&:hover,
+			&:focus {
+				border-color: @accent_color_one;
+				outline: none;
+			}
+		}
+		/** input placeholder **/
+		input::-webkit-input-placeholder {.font('Poppins',14px,400); color: #808080;}
+		input::-moz-placeholder          {.font('Poppins',14px,400); color: #808080;}/* Firefox 19+ */
+		input:-moz-placeholder           {.font('Poppins',14px,400); color: #808080;}/* Firefox 18- */
+		input:-ms-input-placeholder      {.font('Poppins',14px,400); color: #808080;}
+		/** focus **/
+		// input:focus::-webkit-input-placeholder {}
+		// input:focus::-moz-placeholder          {}
+		// input:focus:-moz-placeholder           {}
+		// input:focus:-ms-input-placeholder      {}
+		/** textarea placeholder **/
+		textarea::-webkit-input-placeholder {.font('Poppins',14px,400); color: #808080;}
+		textarea::-moz-placeholder          {.font('Poppins',14px,400); color: #808080;}/* Firefox 19+ */
+		textarea:-moz-placeholder           {.font('Poppins',14px,400); color: #808080;}/* Firefox 18- */
+		textarea:-ms-input-placeholder      {.font('Poppins',14px,400); color: #808080;}
+		/** focus **/
+		// textarea:focus::-webkit-input-placeholder {}
+		// textarea:focus::-moz-placeholder          {}
+		// textarea:focus:-moz-placeholder           {}
+		// textarea:focus:-ms-input-placeholder      {}
+		.button {
+			z-index: 3;
+			button.btn-animation-one:before {
+				z-index: -2;
+			}
+			button.btn-animation-one:after {
+				z-index: 2;
+			}
+		}
+	}
+}
+/**************************************************************
+*                                                             *
+*                       RESPONSIVE                            *
+*                                                             *
+**************************************************************/
+/** 1600px **/
+@media screen and (max-width: 1600px){
+
+	/** OTHER **/
+	#contact {
+		background-size: contain;
+		background-position: center bottom 39%;
+		padding: 90px 0;
+	}
+
+	/** TITLE **/
+	.section-title.contact-title {
+		margin-bottom: 90px;
+	}
+}
+/** END **/
+
+/** 1200px **/
+@media screen and (max-width: 1200px){
+	/** OTHER **/
+	#contact {
+		padding: 60px 0;
+	}
+
+	/** TITLE **/
+	.section-title.contact-title {
+		margin-bottom: 50px;
+	}
+}
+/** END **/
+
+/** 992px **/
+@media screen and (max-width: 992px){
+
+	/** TITLE **/
+	.section-title.contact-title {
+		margin-bottom: 40px;
+	}
+
+	/** ERROR **/
+	.error-block {
+		h2 {
+			font-size: 30px;
+		}
+		p {
+			font-size: 18px;
+		}
+		ul {
+			padding-top: 10px;
+			li {
+				font-size: 15px;
+				margin-top: 10px;
+			}
+		}
+	}
+
+}
+/** END **/
+
+/** 768px **/
+@media screen and (max-width: 768px){
+
+	/** TITLE **/
+	.section-title.contact-title {
+		margin-bottom: 40px;
+		h2 {
+			color: #444444;
+		}
+	}
+
+
+	/** ERROR **/
+	.error-block {
+		h2 {
+			font-size: 20px;
+		}
+		p {
+			font-size: 15px;
+		}
+	}
+
+}
+/** END **/
+
+/** 500px **/
+@media screen and (max-width: 500px){
+
+	/** CONTACT FORM SECTION **/
+	#contactFormFooterSection {
+		form#contactFormFooter {
+			input, textarea {
+				margin-bottom: 15px;
+				padding: 12px 0 15px 12px;
+			}
+		}
+	}
+
+}
+/** END **/

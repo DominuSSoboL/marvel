@@ -1,0 +1,175 @@
+/**************************************************************
+*                                                             *
+*                   OTHER DECORATION BLOCK                    *
+*                                                             *
+**************************************************************/
+#blog {
+	text-align: center;
+	padding: 140px 0 160px;
+	background-color: @white;
+}
+/**************************************************************
+*                                                             *
+*                            TITLE                            *
+*                                                             *
+**************************************************************/
+.section-title.blog-title {
+	margin-bottom: 118px;
+	h2 {
+		color: #f0f0f0;
+	}
+}
+/**************************************************************
+*                                                             *
+*                            POSTS                            *
+*                                                             *
+**************************************************************/
+.post-item {
+	overflow: hidden;
+	.preview {
+		img {
+			position: relative;
+			width: 100%;
+			height: auto;
+			margin-bottom: 0px;
+		}
+		.date {
+			.font('Montserrat',12px,700);
+			width: 60%;
+			padding: 12px 0;
+			margin: auto;
+			transform: translateY(-50%);
+			background-color: #f9f9f9;
+			border-radius: 20px;
+		}
+	}
+	.description {
+		h5 {
+			.font('Open Sans',18px,700);
+			text-transform: uppercase;
+			color: #444444;
+		}
+		p.sub-title-post {
+			.font('Open Sans',11px,400);
+			text-transform: uppercase;
+		}
+		p.short-description {
+			.font('Open Sans',14px,400);
+			padding: 0 22px;
+		}
+		.button {
+			button {
+				.font('Montserrat',10px,700);
+				text-transform: uppercase;
+				box-sizing: border-box;
+				width: 60%;
+				padding: 12px 0;
+				margin: auto;
+				background-color: #dad8d8;
+				border-radius: 20px;
+				border: 1px solid #dad8d8;
+				transition: 0.5s;
+			}
+			button:hover,
+			button:focus {
+				background-color: @accent_color_one;
+				border: 1px solid #222222;
+				box-sizing: border-box;
+			}
+		}
+	}
+}
+/**************************************************************
+*                                                             *
+*                       RESPONSIVE                            *
+*                                                             *
+**************************************************************/
+/** 1200px **/
+@media screen and (max-width: 1200px){
+	/** OTHER **/
+	#blog {
+		padding: 100px 0 100px;
+	}
+	/** TITLE **/
+	.section-title.blog-title {
+		margin-bottom: 80px;
+	}
+	/** POSTS **/
+	.post-item .description p.short-description {
+		font-size: 13px;
+		padding: 0 5px;
+	}
+}
+/** END **/
+
+/** 992px **/
+@media screen and (max-width: 992px){
+	/** OTHER **/
+	#blog {
+		padding: 60px 0 20px;
+	}
+	/** TITLE **/
+	.section-title.blog-title {
+		margin-bottom: 50px;
+	}
+	/** POSTS **/
+	.post-item {
+		min-height: 550px;
+	}
+}
+/** END **/
+
+/** 768px **/
+@media screen and (max-width: 768px){
+	/** OTHER **/
+	#blog {
+		padding: 50px 0 20px;
+	}
+	/** TITLE **/
+	.section-title.blog-title {
+		margin-bottom: 20px;
+		h2 {
+			color: @text_color;
+		}
+	}
+	/** POSTS **/
+	.post-item {
+		min-height: auto;
+		margin-bottom: 60px;
+		.preview {
+			width: 60%;
+			margin: auto;
+		}
+		.description {
+			h5 {
+				font-size: 16px;
+			}
+			p.sub-title-post {
+				font-size: 10px;
+			}
+			p.short-description {
+				padding: auto;
+				width: 60%;
+				margin: 0 auto 20px;
+			}
+		}
+	}
+}
+/** END **/
+
+/** 550px **/
+@media screen and (max-width: 550px){
+
+	/** POSTS **/
+	.post-item {
+		.preview {
+			width: 90%;
+		}
+		.description {
+			p.short-description {
+				width: 90%;
+			}
+		}
+	}
+}
+/** END **/

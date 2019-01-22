@@ -1,0 +1,429 @@
+/**************************************************************
+*                                                             *
+*                         OTHER STYLES                        *
+*                                                             *
+**************************************************************/
+section.slider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  background: @gray url('../../img/slider/avatar.png')no-repeat;
+	background-position: right -5% bottom;
+	background-size: 880px;
+}
+
+/** Show - Hide blocks for mobile and when user have off js **/
+.mobile-header--hidden,
+.slider--hidden {
+	display: none;
+}
+.slider--active {
+	display: block;
+}
+/**************************************************************
+*                                                             *
+*                         OWL - CARUSEL                       *
+*                                                             *
+**************************************************************/
+.owl-carousel {
+  padding: 0;
+}
+.block-one-example {
+	.item {
+	  position: relative;
+		padding-top: 15px;
+		&:after {
+			display: block;
+			content: '';
+			box-sizing: border-box;
+			border-radius: 50%;
+		  background-color: @dot-color;
+		  position: absolute;
+		  left: 0px;
+		  top: 0px;
+		  width: 191px;
+		  height: 191px;
+		  z-index: 2;
+		}
+		.inner-testimonial {
+		  z-index:99;
+		  position: relative;
+  		h1.title {
+  		  .font ('Montserrat', 60px, 900);
+  		  line-height: 75px;
+  			margin: 0 0 69px 25px;
+  		  color: @OWL-title-color;
+  		}
+  		.text-testimonial {
+  		  .font ('Muli', 16px, 400);
+  		  margin: 0 0 0 25px;
+  			background-color: @substrate-under-the-text;
+  		  color: @OWL-text-color;
+  		  z-index: 1;
+  		}
+  		button.btn-header-contact-us {
+  			margin: 25px 0 40px 25px;
+  		}
+	  }
+  }
+  .owl-theme .owl-nav {
+  	margin: 0;
+  }
+  .owl-controls {
+  	padding-left: 25px !important;
+  }
+}
+// Mobile slider
+.mobile-header {
+	display: block;
+	position: relative;
+	z-index:2;
+	.wrapper {
+		&:before {
+			display: block;
+			content: '';
+			box-sizing: border-box;
+			border-radius: 50%;
+			background-color: rgb(255, 228, 0);
+			position: absolute;
+			left: 0px;
+			top: -15px;
+			width: 191px;
+			height: 191px;
+			z-index:1;
+		}
+		h1.title {
+			z-index: 99;
+			position: relative;
+			.font ('Montserrat', 60px, 900);
+			line-height: 75px;
+			margin: 0 0 50px 25px;
+			color: @OWL-title-color;
+		}
+		.text-testimonial {
+			.font ('Muli', 18px, 400);
+			width: 50%;
+			margin: 0 0 0 25px;
+			background-color: @substrate-under-the-text;
+			color: @OWL-text-color;
+			z-index: 1;
+		}
+		button.btn-header-contact-us {
+			margin:35px 0 40px 25px;
+		}
+	}
+}
+/**************************************************************
+*                                                             *
+*                          RESPONSIVE                         *
+*                                                             *
+**************************************************************/
+/* RESPONSIVE AVATAR IMAGE */
+@media screen and (max-height: 1030px){
+	section.slider { background-size: 820px; }
+}
+@media screen and (max-width: 1800px){
+	section.slider { background-size: 820px; }
+}
+/** ************************************ **/
+@media screen and (max-height: 960px){
+	section.slider { background-size: 780px; }
+}
+@media screen and (max-width: 1700px){
+	section.slider { background-size: 780px; }
+}
+/** ************************************ **/
+@media screen and (max-height: 915px){
+	section.slider { background-size: 700px; }
+}
+@media screen and (max-width: 1200px){
+	section.slider { background-size: 500px; }
+}
+/** ************************************ **/
+@media screen and (max-height: 815px){
+	section.slider { background-size: 600px; }
+}
+/** ************************************ **/
+@media screen and (max-height: 700px){
+	section.slider { background-size: 550px; }
+}
+/** ************************************ **/
+@media screen and (max-height: 650px){
+	section.slider { background-size: 500px; }
+}
+/** ************************************ **/
+@media screen and (max-height: 585px){
+	section.slider { background-size: 400px; }
+}
+
+/* OTHER RESPONSIVE */
+/** 1650px **/
+@media screen and (max-width: 1650px) {
+  /** OWL - CARUSEL **/
+	.block-one-example {
+		.item {
+			.inner-testimonial {
+				.text-testimonial {
+				  width: 80%;
+				}
+			}
+		}
+	}
+}
+/** END **/
+
+/** 1475px **/
+@media screen and (max-width: 1475px) {
+
+  /** OTHER **/
+	section.slider {
+		background-size: 600px;
+	}
+
+	/** OWL - CARUSEL **/
+	.block-one-example {
+		.item {
+			&:after {
+			  width: 160px;
+			  height: 160px;
+			}
+			.inner-testimonial {
+				padding-right: 100px;
+				h1.title {
+				  font-size: 50px;
+				  line-height: 60px;
+				  margin: 0 0 50px 25px;
+				}
+				button.btn-header-contact-us {
+					margin: 25px 0 20px 25px;
+				}
+			}
+		}
+		.owl-controls {
+			padding-left: 25px !important;
+		}
+	}
+	// Mobile slider
+	.mobile-header {
+		.wrapper {
+			&:before {
+				top: -20px;
+				width: 161px;
+				height: 161px;
+			}
+			h1.title {
+				font-size: 50px;
+				line-height: 55px;
+			}
+			.text-testimonial {
+				font-size: 16px;
+			}
+		}
+	}
+}
+/** END **/
+
+/** 1200px **/
+@media screen and (max-width: 1200px) {
+
+  /** OTHER **/
+	section.slider {
+		background-size: 500px;
+	}
+
+	/** OWL - CARUSEL **/
+	.block-one-example {
+		.item {
+			&:after {
+			  width: 120px;
+			  height: 120px;
+			}
+			.inner-testimonial {
+				h1.title {
+				  font-size: 35px;
+				  line-height: 45px;
+				}
+				.text-testimonial {
+				  font-size: 16px;
+				}
+				button.btn-header-contact-us {
+					padding: 15px 30px;
+				}
+			}
+		}
+	}
+	// Mobile slider
+	.mobile-header {
+		.wrapper {
+			&:before {
+				top: -15px;
+				width: 141px;
+				height: 141px;
+			}
+			h1.title {
+				font-size: 45px;
+				margin: 0 0 35px 25px;
+			}
+			button.btn-header-contact-us {
+				padding: 15px 30px;
+			}
+		}
+	}
+}
+/** END **/
+
+/** 992px **/
+@media screen and (max-width: 992px) {
+
+  /** OTHER **/
+	section.slider {
+		background-size: 450px;
+	}
+
+	/** OWL - CARUSEL **/
+	.block-one-example {
+		.item {
+			&:after {
+			  width: 95px;
+			  height: 95px;
+			}
+			.inner-testimonial {
+				h1.title {
+				  font-size: 25px;
+				  line-height: 30px;
+				  margin: 0 0 30px 25px;
+				}
+				.text-testimonial {
+				  font-size: 14px;
+				}
+				button.btn-header-contact-us {
+					font-size: 14px;
+					line-height: 14px;
+					padding: 10px 20px;
+				}
+			}
+		}
+	}
+	// Mobile slider
+	.mobile-header {
+		.wrapper {
+			&:before {
+				top: -20px;
+				width: 121px;
+				height: 121px;
+			}
+			h1.title {
+				font-size: 35px;
+				line-height: 40px;
+				margin: 0 0 30px 25px;
+			}
+			.text-testimonial {
+				font-size: 14px;
+				margin: 0 0 0 20px;
+			}
+			button.btn-header-contact-us {
+				font-size: 14px;
+				margin: 25px 0 40px 20px;
+			}
+		}
+	}
+}
+/** END **/
+
+/** 800px **/
+@media screen and (max-width: 800px) {
+
+  /** OTHER **/
+	section.slider {
+		background-size: 400px;
+	}
+
+}
+/** END **/
+
+/** 768px **/
+@media screen and (max-width: 768px) {
+
+  /** OTHER **/
+	section.slider {
+		background: @gray url('../../img/slider/mobile-slider-section-bacground.jpg')no-repeat;
+		background-position: center;
+		background-size: 100% 100%;
+	}
+
+  /** OWL - CARUSEL **/
+	.slider--hidden {
+		display: none;
+	}
+	// Mobile slider
+	.mobile-header {
+		display: block;
+		text-align: center;
+		z-index: 3;
+		.wrapper {
+			&:before {
+				display: none;
+			}
+			h1.title {
+				font-size: 35px;
+				line-height: 45px;
+				margin: 0 0 20px 0;
+			}
+			.text-testimonial {
+			  font-size: 16px;
+			  margin: 0;
+			  margin: auto;
+			  width: 90%;
+			  background: none;
+			}
+			button.btn-header-contact-us {
+				font-size: 16px;
+				line-height: 16px;
+				min-width: 200px;
+				margin-left: 0;
+			}
+		}
+	}
+}
+/** END **/
+
+/** 550px **/
+@media screen and (max-width: 550px) {
+
+  /** OTHER **/
+	section.slider {
+		background: @gray url('../../img/slider/mobile-slider-section-bacground-400.jpg')no-repeat;
+		min-height: 400px;
+		background-size: 100% 100%;
+	}
+
+  /** OWL - CARUSEL **/
+	.mobile-header {
+		display: block;
+		text-align: center;
+		z-index: 3;
+		.wrapper {
+			&:before {
+				display: none;
+			}
+		}
+	}
+	// Mobile slider
+	.mobile-header {
+		.wrapper {
+			h1.title {
+			  font-size: 30px;
+				margin-top: 60px;
+			}
+			.text-testimonial {
+			  font-size: 14px;
+			}
+			button.btn-header-contact-us {
+				font-size: 14px;
+			}
+		}
+	}
+}
+/** END **/

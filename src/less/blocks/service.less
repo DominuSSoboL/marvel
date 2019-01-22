@@ -1,0 +1,267 @@
+/**************************************************************
+*                                                             *
+*                   OTHER DECORATION BLOCK                    *
+*                                                             *
+**************************************************************/
+#service {
+	position: relative;
+	padding: 161px 0 120px;
+	background: url('../../img/service/happy-clients.jpg')no-repeat;
+	background-position: left 0% bottom 0%;
+	background-size: 900px 920px;
+	border-top: 1px solid @border-items-color;
+}
+#service:after {
+	content: 'O';
+	display: block;
+	position: absolute;
+	bottom: 100px;
+	left: 0;
+	transform: translateX(-40%);
+	.font('Montserrat',1220px,700);
+	line-height: 100px;
+	color: @accent_color_one;
+	opacity: 0.71;
+	z-index: 1;
+}
+/**************************************************************
+*                                                             *
+*                           TITLE                             *
+*                                                             *
+**************************************************************/
+.section-title.service-title {
+	text-align: left;
+	padding-bottom: 100px;
+	p.section-title__sub-title {
+		width: 100%;
+		font-size: 29px;
+		left: 0;
+		transform: translateX(0);
+	}
+}
+/**************************************************************
+*                                                             *
+*                        SERVCE ITEMS                         *
+*                                                             *
+**************************************************************/
+.service__desc-item {
+	text-align: center;
+	.services-icon {
+			margin-bottom: 44px;
+		i {
+			font-size: 36px;
+		}
+	}
+	.services-description {
+		h4 {
+			.font('Montserrat',18px,700);
+			text-transform: uppercase;
+			margin-bottom: 38px;
+			color: @text_color;
+		}
+		p {
+			.font('Open Sans',16px,400);
+			color: @more-text-color;
+		}
+	}
+}
+.service__desc-item-one {
+	padding-bottom: 60px;
+	border-right: 1px solid @border-items-color;
+	border-bottom: 1px solid @border-items-color;
+}
+.service__desc-item-two {
+	padding-bottom: 60px;
+	border-bottom: 1px solid @border-items-color;
+}
+.service__desc-item-three {
+	padding-top: 38px;
+	border-right: 1px solid @border-items-color;
+}
+.service__desc-item-four {
+	padding-top: 38px;
+}
+/**************************************************************
+*                                                             *
+*                        RESPONSIVE                           *
+*                                                             *
+**************************************************************/
+/** 1600px **/
+@media screen and (max-width: 1600px) {
+	/** OTER **/
+	#service {
+		padding: 150px 0 100px;
+		background-size: 750px 790px;
+	}
+	#service:after {
+		.font('Montserrat',1020px,700);
+	}
+	/** Services items **/
+	.service__desc-item {
+		.services-icon {
+				margin-bottom: 40px;
+		}
+		.services-description {
+			h4 {
+				margin-bottom: 34px;
+			}
+		}
+	}
+}
+/** END **/
+
+/** 1400px **/
+@media screen and (max-width: 1400px) {
+
+	/** Other **/
+	#service {
+		padding: 130px 0 100px;
+		background-size: 680px 700px;
+	}
+
+}
+/** END **/
+
+/** 1200px **/
+@media screen and (max-width: 1200px) {
+
+	/** OTHER **/
+	#service {
+		padding: 80px 0 50px;
+		background-size: 580px 600px;
+	}
+	#service:after {
+		font-size: 820px;
+	}
+
+	/** TITLE **/
+	.section-title.service-title {
+		padding-bottom: 40px;
+		p.section-title__sub-title {
+			font-size: 22px;
+		}
+	}
+
+	/** SERVICES ITEMS **/
+	.service__desc-item {
+		.services-icon {
+				margin-bottom: 24px;
+		}
+		.services-description {
+			h4 {
+				font-size: 16px;
+				margin-bottom: 18px;
+			}
+			p {
+				font-size: 14px;
+			}
+		}
+	}
+	.service__desc-item-one,
+	.service__desc-item-two {
+		padding-bottom: 0px;
+		min-height: 190px;
+	}
+	.service__desc-item-three,
+	.service__desc-item-four {
+		padding-top: 30px;
+	}
+
+}
+/** END **/
+
+/** 1060px **/
+@media screen and (max-width: 1060px) {
+
+	/** OTHER **/
+	#service {
+		padding: 80px 0 50px;
+		background-size: 500px 540px;
+	}
+	#service:after {
+		font-size: 650px;
+		bottom: 50px;
+	}
+
+}
+/** END **/
+
+/** 992px **/
+@media screen and (max-width: 992px) {
+
+	.service-left {
+		display: none;
+	}
+
+	/** TILE **/
+	.section-title.service-title {
+		text-align: center;
+	}
+	/** OTHER **/
+	#service {
+		padding: 80px 0 50px;
+		background: none;
+	}
+	#service:after {
+		display: none;
+	}
+
+	/** TITLE **/
+	.section-title.service-title {
+		padding-bottom: 50px;
+		p.section-title__sub-title {
+			font-size: 18px;
+		}
+	}
+
+}
+/** END **/
+
+/** 768px **/
+@media screen and (max-width: 768px) {
+
+	/** OTHER **/
+	#service {
+		padding: 60px 0 50px;
+	}
+
+	/** TITLE **/
+	.section-title.service-title {
+		padding-bottom: 50px;
+		h2 {
+			color: @text_color;
+		}
+	}
+	/** Services items **/
+	.service__desc-item {
+		.services-icon {
+				margin-bottom: 24px;
+			i {
+				font-size: 30px;
+			}
+		}
+		.services-description {
+			h4 {
+				font-size: 14px;
+				margin-bottom: 10px;
+			}
+			p {
+				font-size: 14px;
+			}
+		}
+	}
+	.service__desc-item-one,
+	.service__desc-item-two {
+		padding-bottom: 0px;
+		margin-bottom: 40px;
+		min-height: auto;
+		border: none;
+	}
+	.service__desc-item-three,
+	.service__desc-item-four {
+		padding-top: 0;
+		margin-bottom: 40px;
+		border: none;
+	}
+}
+/** END **/

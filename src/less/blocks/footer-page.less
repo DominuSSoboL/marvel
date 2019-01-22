@@ -1,0 +1,137 @@
+/**************************************************************
+*                                                             *
+*                   OTHER DECORATION BLOCK                    *
+*                                                             *
+**************************************************************/
+#pageFooter {
+  padding: 63px 0 69px;
+  text-align: center;
+  background-color: #212121;
+  color: #fff;
+}
+/**************************************************************
+*                                                             *
+*                      LEFT BAR FOOTER                        *
+*                                                             *
+**************************************************************/
+.left-bar-footer {
+  .icon {
+    height: 50px;
+    width: 50px;
+    margin: auto;
+    border-radius: 50%;
+    border: 1px solid #7b7b7b;
+    background-color: #2e2d2d;
+    i {
+      font-size: 25px;
+      line-height: 50px;
+    }
+  }
+  p {
+    .font('Muli',13px,400);
+  }
+}
+/**************************************************************
+*                                                             *
+*                        FOOTER SOCIALE                       *
+*                                                             *
+**************************************************************/
+.social-footer {
+  ul {
+    width: 80%;
+    height: 100%;
+    padding: 25px 0;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    li {
+      margin: 0 10px;
+      i {
+        font-size: 20px;
+        color: #fff;
+        transition: 0.3s;
+        &:hover,
+        &:focus {
+          color:@accent_color_one;
+        }
+      }
+    }
+  }
+}
+/**************************************************************
+*                                                             *
+*                      RIGHT BAR FOOTER                       *
+*                                                             *
+**************************************************************/
+.right-bar-footer.mobile {
+  display: none;
+}
+.right-bar-footer {
+  .icon {
+    height: 50px;
+    width: 50px;
+    margin: auto;
+    border-radius: 50%;
+    border: 1px solid #7b7b7b;
+    background-color: #2e2d2d;
+    i {
+      font-size: 25px;
+      line-height: 50px;
+    }
+  }
+  p {
+    .font('Muli',13px,400);
+  }
+}
+/**************************************************************
+*                                                             *
+*                         RESPONSIVE                          *
+*                                                             *
+**************************************************************/
+/** 1200px **/
+@media screen and (max-width: 1200px){
+
+  /** OTHER **/
+  #pageFooter {
+    padding: 40px 0;
+  }
+
+}
+/** END **/
+
+/** 992px **/
+@media screen and (max-width: 992px){
+
+  /** OTHER **/
+  #pageFooter {
+    padding: 20px 0;
+  }
+
+  /** RIGHT BAR FOOTER **/
+  .right-bar-footer.mobile {
+    display: block;
+  }
+  .right-bar-footer {
+    display: none;
+  }
+
+}
+/** END **/
+
+/** 768px **/
+@media screen and (max-width: 768px){
+
+  /** FOOTER SOCIALE **/
+  .social-footer {
+    ul {
+      li {
+        i {
+          font-size: 13px;
+        }
+      }
+    }
+  }
+
+}
+/** END **/

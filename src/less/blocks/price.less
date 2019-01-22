@@ -1,0 +1,255 @@
+/**************************************************************
+*                                                             *
+*                   OTHER DECORATION BLOCK                    *
+*                                                             *
+**************************************************************/
+#price {
+	position: relative;
+	padding: 105px 0 109px;
+	background: #f9e119 url('../../img/price/Background.jpg')no-repeat;
+	background-size: cover;
+	z-index: 2;
+}
+/**************************************************************
+*                                                             *
+*                          TITLE                              *
+*                                                             *
+**************************************************************/
+.section-title.price-title {
+	padding-bottom: 141px;
+	h2 {
+		color: @title-h2-color;
+	}
+	p.section-title__sub-title {
+		color: @title-sub-title-color;
+	}
+}
+/**************************************************************
+*                                                             *
+*                      PRICE TABLES                           *
+*                                                             *
+**************************************************************/
+.price-items {
+	display: flex;
+	justify-content: space-around;
+	align-items: flex-end;
+	.praice-table {
+		width: 32%;
+	}
+}
+.praice-table {
+	text-align: center;
+	ul {
+		width: 100%;
+		/** UP TABLE TITLE **/
+		li.up-table-title {
+			.font('Mulli',15px,400);
+			padding: 13px 0;
+			margin-bottom: 5px;
+			text-align: center;
+			text-transform: capitalize;
+			background-color: @background-up-table-title;
+			color: @up-table-title;
+		}
+		/** TABLE TITLE **/
+		li.table-title {
+			background-repeat: no-repeat;
+			background-size: cover;
+			color: @table-title;
+			.table-title-background {
+				background: rgba(68,68,68,0.85);
+				padding: 30px 0 35px;
+				span.sub-title {
+					.font('Montserrat',15px,700);
+					text-transform: uppercase;
+					display: block;
+					margin-bottom: 40px;
+				}
+				div {
+					.font('muli',60px,700);
+					margin-bottom: 32px;
+					span.simbol {
+						font-size: 30px;
+					}
+					span.month {
+						font-size: 13px;
+					}
+				}
+				span.descriptio {
+					.font('Muli',13px,700);
+					display: block;
+				}
+			}
+		}
+		/** LISTS **/
+		.table-item {
+			.font('Muli',13px,400);
+			padding: 25px 0;
+			background-color: @white;
+			border-bottom: 1px solid #f0f0f0;
+			color: #808080;
+			span {
+				margin-right: 5px;
+				transition: 0.2s;
+			}
+			&:hover {
+				span {
+					margin-right: 15px;
+				}
+			}
+		}
+		.table-item.first {
+			padding-top: 85px;
+		}
+		/** TABLE BUTTON **/
+		.table-button {
+			z-index: 3;
+
+			a.marvel-btn {
+				display: block;
+				.font('Montserrat',14px,400);
+				text-transform: capitalize;
+				padding: 18px 0;
+				margin-top: 5px;
+				background-color: #fff;
+				color: #000;
+				transition: 0.5s;
+				&:hover {
+					color: #fff;
+					background-color: @accent_color_darck;
+				}
+			}
+		}
+
+	}
+}
+/**************************************************************
+*                                                             *
+*            BACKGROUND IMAGE FOR TABLE TITLE                 *
+*                                                             *
+**************************************************************/
+.standart-table .table-title  {
+	background-image: url('../../img/price/standart.jpg');
+}
+.premium-table .table-title  {
+	background-image: url('../../img/price/premium.jpg');
+}
+.ultimate-table .table-title  {
+	background-image: url('../../img/price/ultimate.jpg');
+}
+/**************************************************************
+*                                                             *
+*                      RESPONSIVE                             *
+*                                                             *
+**************************************************************/
+/** 1200px **/
+@media screen and (max-width: 1200px){
+
+	/** OTHER **/
+	#price {
+		padding: 80px 0;
+	}
+
+	/** TITLE **/
+	.section-title.price-title {
+		padding-bottom: 60px;
+	}
+	/** PRISE TABLES **/
+	.praice-table {
+		ul {
+			/** TABLE TITLE **/
+			li.table-title {
+				.table-title-background {
+					padding: 30px 0 35px;
+					span.sub-title {
+						margin-bottom: 20px;
+					}
+					div {
+						font-size: 45px;
+						margin-bottom: 22px;
+					}
+				}
+			}
+		}
+	}
+
+}
+/** END **/
+
+/** 992px **/
+@media screen and (max-width: 992px){
+
+	/** TITLE **/
+	.section-title.price-title {
+		padding-bottom: 50px;
+	}
+
+	/** PRICE TABLES **/
+	.price-items {
+		display: block;
+		.praice-table {
+			width: 60%;
+			margin: 20px auto;
+			ul {
+				/** UP TABLE TITLE **/
+				li.up-table-title {
+					padding: 11px 0;
+				}
+				/** TABLE TITLE **/
+				li.table-title {
+					.table-title-background {
+						padding: 15px 0;
+						span.sub-title {
+							margin-bottom: 20px;
+						}
+						div {
+							font-size: 30px;
+							margin-bottom: 15px;
+						}
+					}
+				}
+
+				/** LISTS **/
+				.table-item {
+					padding: 15px 0;
+				}
+				.table-item.first {
+					padding-top: 35px;
+				}
+			}
+		}
+	}
+}
+/** END **/
+
+/** 768px **/
+@media screen and (max-width: 768px){
+
+	/** OTHER **/
+	#price {
+		padding: 50px 0;
+	}
+
+	/** TITLE **/
+	.section-title.price-title {
+		padding-bottom: 20px;
+		h2 {
+			color: @text_color;
+		}
+	}
+
+}
+/** END **/
+
+/** 550px **/
+@media screen and (max-width: 550px){
+
+/** PRICE TABLES **/
+	.price-items {
+		.praice-table {
+			width: 90%;
+		}
+	}
+
+}
+/** END **/

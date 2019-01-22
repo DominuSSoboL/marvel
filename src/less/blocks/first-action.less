@@ -1,0 +1,162 @@
+/**************************************************************
+*                                                             *
+*                             OTHER                           *
+*                                                             *
+**************************************************************/
+#firstCallToAction {
+	background: url('../../img/call-to-action-top/background.jpg')no-repeat;
+	background-size: cover;
+	padding: 162px 0 136px;
+	text-align: center;
+	background-position: right 0 top 0;
+	color: @white;
+}
+/**************************************************************
+*                                                             *
+*                          LOGO                              *
+*                                                             *
+**************************************************************/
+#firstCallToAction .call-to-action__logo img {
+	width: 230px;
+	height: auto;
+	margin-bottom: 66px;
+}
+/**************************************************************
+*                                                             *
+*                          TITLE                              *
+*                                                             *
+**************************************************************/
+#firstCallToAction .coll-to-action__title {
+	h2 {
+		.font('Montserrat',44px,700);
+		text-transform: uppercase;
+		margin-bottom: 43px;
+		color: #fdfdfd;
+	}
+	p {
+		.font('Muli',16px,400);
+		line-height: 26px;
+		width: 68%;
+		margin: auto;
+		margin-bottom: 71px;
+	}
+}
+/**************************************************************
+*                                                             *
+*                           BUTTONS                           *
+*                                                             *
+**************************************************************/
+#firstCallToAction .call-to-action__buttons {
+	z-index: 2;
+	button {
+		min-width: 230px;
+	}
+	/*LEFT BUTTON*/
+	button.btn-animation-one.right-top {
+		color: @white;
+		&:hover {
+			color: @black;
+		}
+	}
+	button.btn-animation-one.right-top:after {
+		border: 1px solid @white;
+	}
+	/*RIGHT BUTTON*/
+	button.btn-animation-one.right-button:before {
+		background-color: transparent;
+		border: 1px solid @white;
+		z-index: -1;
+	}
+	button.btn-animation-one.right-button:after {
+		background-color: @accent_color_one;
+		z-index: -1;
+	}
+	button.btn-animation-one.right-button:hover {
+		color: @white;
+	}
+}
+
+/**************************************************************
+*                                                             *
+*                         RESPONSIVE                          *
+*                                                             *
+**************************************************************/
+/** 1200px **/
+@media screen and (max-width: 1200px){
+
+	/** OTHER **/
+	#firstCallToAction {
+		padding: 80px 0 80px;
+	}
+
+	/** LOGO **/
+	#firstCallToAction .call-to-action__logo img {
+		width: 180px;
+		margin-bottom: 46px;
+	}
+
+	/** TITLE **/
+	#firstCallToAction .coll-to-action__title {
+		h2 {
+			font-size: 36px;
+			margin-bottom: 33px;
+		}
+		p {
+			margin-bottom: 51px;
+		}
+	}
+}
+/** END **/
+
+/** 992px **/
+@media screen and (max-width: 992px){
+
+	/** OTHER **/
+	#firstCallToAction {
+		padding: 60px 0 60px;
+	}
+
+	/** LOGO **/
+	#firstCallToAction .call-to-action__logo img {
+		margin-bottom: 36px;
+	}
+
+	/** TITLE **/
+	#firstCallToAction .coll-to-action__title {
+		h2 {
+			font-size: 30px;
+			margin-bottom: 23px;
+		}
+		p {
+			margin-bottom: 31px;
+		}
+	}
+
+}
+/** END **/
+
+/** 768px **/
+@media screen and (max-width: 768px){
+
+	/** LOGO **/
+	#firstCallToAction .call-to-action__logo img {
+		background-position: right 20% top 0;
+		width: 150px;
+		margin-bottom: 30px;
+	}
+
+	/** TITLE **/
+	#firstCallToAction .coll-to-action__title {
+		h2 {
+		font-size: 25px;
+			margin-bottom: 15px;
+		}
+	}
+
+	/** BUTTONS **/
+	button.btn-animation-one.right-top {
+		margin-bottom: 20px;
+	}
+
+}
+/** END **/

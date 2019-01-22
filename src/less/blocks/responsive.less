@@ -1,0 +1,276 @@
+/**************************************************************
+*                                                             *
+*                   OTHER DECORATION BLOCK                    *
+*                                                             *
+**************************************************************/
+section#responsive {
+	padding: 171px 0 116px;
+	border-top: 1px solid @responsive-border-top-color;
+	background: @responsive-background-color url('../../img/responsive/Lamp.png')no-repeat;
+	background-position: top 0px left 69px;
+	background-size: 210px 350px;
+}
+/**************************************************************
+*                                                             *
+*                             TITLE                           *
+*                                                             *
+**************************************************************/
+.responsive-title {
+	text-align: left;
+	.section-tittle__wrapper {
+		h2 {
+			font-size: 71px;
+			line-height: 70px;
+		}
+		p.section-title__sub-title {
+			font-size: 26px;
+			left: 0;
+			transform: translateX(0);
+		}
+	}
+	p.section-title__description {
+		padding-top: 50px;
+		margin-top: 0;
+		color: @more-text-color;
+	}
+}
+/**************************************************************
+*                                                             *
+*                      RESPONSIVE ITEMS                       *
+*                                                             *
+**************************************************************/
+.responsive-items {
+	margin-top: 57px;
+	ul {
+		li {
+			&:not(:last-child) {
+				margin-bottom: 20px;
+			}
+			span {
+				margin-right: 15px;
+			}
+			.font('Montserrat',16px,400);
+			color: @more-text-color;
+			i {
+
+			}
+		}
+	}
+}
+/** RESPONSIVE RIOGHT BOX **/
+.responsiv-right-box {
+	height: 100%;
+	&:before{
+		content: 'O';
+		.font('Montserrat',470px,700);
+		line-height: 380px;
+		display: block;
+		position: absolute;
+		top: 50%;
+		left: 40%;
+		transform: translate(-50%, -50%);
+		color: @responsive-decoration-color;
+		z-index: 1;
+	}
+	img {
+		position: relative;
+		width: 100%;
+		z-index: 2;
+	}
+}
+.responsiv-right-box.responsiv-right-box--mobile {
+	display: none;
+}
+/**************************************************************
+*                                                             *
+*                         RESPONSIVE                          *
+*                                                             *
+**************************************************************/
+
+/** 1700px **/
+@media screen and (max-width: 1700px){
+
+	/** OTHER **/
+	section#responsive {
+		background-size: 110px 200px;
+	}
+
+}
+/** END **/
+
+/** 1500px **/
+@media screen and (max-width: 1500px){
+
+	/** OTHER **/
+	section#responsive {
+		background-size: 110px 150px;
+	}
+
+}
+/** END **/
+
+/** 1200px **/
+@media screen and (max-width: 1200px){
+
+	/** TITLE **/
+	.responsive-title {
+		.section-tittle__wrapper {
+			h2 {
+				font-size: 61px;
+			}
+		}
+		p.section-title__description {
+			padding-top: 30px;
+		}
+	}
+
+	/* RESPONSIVE ITEMS */
+	.responsive-items {
+		margin-top: 0px;
+	}
+	/** RESPONSIVE RIGHT BOX **/
+	.responsiv-right-box {
+		&:before{
+			font-size: 370px;
+		}
+		img {
+			width: 90%;
+		}
+	}
+}
+/** END **/
+
+/** 992px **/
+@media screen and (max-width: 992px){
+
+	/** TITLE **/
+	.responsive-title {
+		text-align: center;
+		.section-tittle__wrapper {
+			h2 {
+				font-size: 50px;
+				line-height: 55px;
+			}
+			p.section-title__sub-title {
+				position: relative;
+				font-size: 18px;
+			}
+		}
+		p.section-title__description {
+			padding-top: 15px;
+		}
+	}
+
+	/* RESPONSIVE ITEMS */
+	.responsive-items {
+		margin-top: 57px;
+	}
+	.responsiv-right-box {
+		display: none;
+	}
+	.responsiv-right-box.responsiv-right-box--mobile {
+		display: block;
+	}
+
+}
+/** END **/
+
+/** 768px **/
+@media screen and (max-width: 768px){
+
+	/** OTHER **/
+	section#responsive {
+		padding: 131px 0 56px;
+		background-size: 110px 150px;
+	}
+
+	/** TITLE **/
+	.responsive-title {
+		.section-tittle__wrapper {
+			h2 {
+				font-size: 25px;
+				line-height: 25px;
+				color: @text_color;
+			}
+		}
+		p.section-title__description {
+			padding-top: 0px;
+		}
+	}
+
+	/** RESPONSIVE RIGHT BOX **/
+	.responsiv-right-box.responsiv-right-box--mobile {
+		height: 100%;
+		text-align: center;
+		padding-top: 20px;
+		&:before{
+			left: 50%;
+			transform: translate(-50%, -50%);
+			.font('Montserrat',270px,700);
+			line-height: 280px;
+		}
+		img {
+			width: 65%;
+		}
+	}
+}
+/** END **/
+
+/** 550px **/
+@media screen and (max-width: 550px){
+
+	/** OTHER **/
+	section#responsive {
+		padding: 131px 0 56px;
+		background-size: 90px 100px;
+	}
+
+	/** TITLE **/
+	.responsive-title {
+		.section-tittle__wrapper {
+			h2 {
+				color: @text_color;
+			}
+			p {
+				font-size: 16px;
+			}
+		}
+
+		p.section-title__description {
+			.font('Muli',16px,400);
+			padding-top: 0px;
+		}
+	}
+
+	/* RESPONSIVE ITEMS */
+	.responsive-items {
+		margin-top: 57px;
+		ul {
+			li {
+				&:not(:last-child) {
+					margin-bottom: 20px;
+				}
+				span {
+					margin-right: 10px;
+				}
+				font-size: 12px;
+			}
+		}
+	}
+
+}
+/** END **/
+
+/** 400px **/
+@media screen and (max-width: 400px){
+
+	/** RESPONSIVE RIGHT BOX **/
+	.responsiv-right-box.responsiv-right-box--mobile {
+		&:before{
+		  font-size: 170px;
+			line-height: 180px;
+		}
+	}
+
+}
+/** END **/

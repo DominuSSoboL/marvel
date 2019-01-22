@@ -1,0 +1,285 @@
+/**************************************************************
+*                                                             *
+*                         MENU STYLES                         *
+*                                                             *
+**************************************************************/
+/** OTHER **/
+header.page-header {
+  position: fixed;
+  left: 0;
+  width: 100%;
+  z-index: 9999999;
+}
+.navbar {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  padding: 0 5%;
+  box-sizing: border-box;
+  background-color: @background_header;
+  z-index: 9999999;
+}
+
+/** LOGO AND BURGER **/
+.navbar__header {
+  width: 29.3333%;
+  /** STANDART BURGER **/
+  a.navbar__button-burger {
+    display: none;
+    position: absolute;
+    right: 20px;
+    width: 20px;
+    height: 20px;
+    span,
+    span::before,
+    span::after {
+      position: absolute;
+      top: 50%; margin-top: -1px;
+      left: 50%; margin-left: -10px;
+      width: 20px;
+      height: 2px;
+      background-color: @menu_text_burger;
+    }
+    span::before,
+    span::after {
+      content: '';
+      display: block;
+      transition: 0.2s;
+    }
+    span::before {
+      transform: translateY(-5px);
+    }
+    span::after {
+      transform: translateY(5px);
+    }
+  }
+  a.navbar__button-burger--active {
+    span {
+      height: 0;
+    }
+    span::before {
+      transform: rotate(45deg);
+    }
+    span::after {
+      transform: rotate(-45deg);
+    }
+  }
+  /** LOGO **/
+  .navbar__logo {
+    a {
+      display: block;
+      .font('Montserrat', 23px, 700);
+      text-decoration: none;
+      color: @menu_text;
+      span {
+        color: @menu_text_hover_active;
+      }
+    }
+  }
+}
+
+/** MENU **/
+.navbar__menu-items {
+  width: 70.3333%;
+  ul {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding: 0;
+    margin: 0;
+    li {
+      list-style: none;
+      display: inline-block;
+      a {
+        display: block;
+        .font('Montserrat', 14px, 400);
+        line-height: 24px;
+        padding: 28px 0;
+        text-decoration: none;
+        color: @menu_text;
+        transition: 0.3s;
+        &:hover,
+        &:focus {
+          color: @menu_text_hover_active;
+        }
+      }
+      &:not(:last-child) {
+        padding-right: 34px;
+      }
+      &:active {
+        color: @menu_text_hover_active;
+      }
+    }
+  }
+}
+#navbar a.active {
+  color: @menu_text_hover_active;
+}
+
+
+/**************************************************************
+*                                                             *
+*            IF USER HAVE OFF JAVASCRIPT                      *
+*                                                             *
+**************************************************************/
+/** OTHER **/
+#navbar.navbar.navbar--no-js {
+  position: relative;
+  margin-top: -80px;
+  & a.active {
+    color: @menu_text_hover_active;
+  }
+}
+/** BURGER CHECKBOX **/
+input[type="checkbox"] {
+  display: none;
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+}
+label[for="nav-trigger"] {
+  display: none;
+  position: absolute;
+  top: 10px;
+  right: 3%;
+  z-index: 2;
+  width: 21px;
+  height: 20px;
+  cursor: pointer;
+  background-image: url("https://i.postimg.cc/ZRy40SQ2/menu.png");
+  background-size: contain;
+}
+.nav-trigger:checked + label .navbar__menu-items.navbar__menu-items--collapse {
+  transition: transform 0.5s;
+  transform-origin: top right;
+  transform: scale(1);
+}
+.nav-trigger:checked ~ .navbar__menu-items.navbar__menu-items--collapse {
+  transition: transform 0.5s;
+  transform-origin: top right;
+  transform: scale(1);
+}
+/**************************************************************
+*                                                             *
+*                        RESPONSIVE                           *
+*                                                             *
+**************************************************************/
+
+/** 992px **/
+@media screen and (max-width: 992px){
+
+  /** LOGO **/
+  .navbar__header {
+    .navbar__logo {
+      a {
+        font-size: 20px;
+      }
+    }
+  }
+
+  /** MENU **/
+  .navbar__menu-items {
+    ul {
+      li {
+        a {
+          font-size: 12px;
+          line-height: 20px;
+          padding: 20px 0;
+        }
+        &:not(:last-child){
+          padding-right: 20px;
+        }
+      }
+    }
+  }
+
+}
+/** END **/
+
+/** 768px **/
+@media screen and (max-width: 768px){
+
+  /** OTHER **/
+  .navbar {
+    position: absolute;
+    top: 0;
+    display: block;
+    padding: 0 1%;
+  }
+
+  /** IF USER HAVE OFF JAVASCRIPT **/
+  #navbar.navbar.navbar--no-js {
+    margin-top: -48px;
+  }
+  /** LOGO **/
+  .navbar__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    width: 29.3333%;
+  }
+
+  /** IF USER HAVE OFF JAVASCRIPT **/
+  input[type="checkbox"],
+  label[for="nav-trigger"] {
+    display: block;
+  }
+
+  /** MENU COLLAPSE **/
+  .navbar__menu-items.navbar__menu-items--collapse {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 100%;
+    transition: transform 0.5s;
+    transform-origin: top right;
+    transform: scale(0);
+    ul {
+       display: block;
+       width: 100%;
+      li {
+        text-align: right;
+        background-color: @background_header;
+        opacity: 0.9;
+        display: list-item;
+        padding-right: 20px;
+        a {
+          padding: 10px 0;
+        }
+      }
+    }
+  }
+  .navbar__menu-items.navbar__menu-items--collapse.active {
+    transition: transform 0.5s;
+    transform-origin: top right;
+    transform: scale(1);
+  }
+}
+/** END **/
+
+/** 400px **/
+@media screen and (max-width: 400px){
+  /** MENU COLLAPSE **/
+  .navbar__menu-items.navbar__menu-items--collapse {
+    ul {
+      li {
+        a {
+          padding: 5px 0;
+        }
+      }
+    }
+  }
+}
+/** END **/
+
+/** 400px **/
+@media screen (max-width: 795px) {
+  a.navbar__button-burger {display: none;}
+}
+/**************************************************************
+*                                                             *
+* If the user has disabled javascript support in his browser  *
+*                                                             *
+**************************************************************/

@@ -1,0 +1,218 @@
+/**************************************************************
+*                                                             *
+*                   OTHER DECORATION BLOCK                    *
+*                                                             *
+**************************************************************/
+html, body {
+  margin: 0;
+  padding: 0;
+  min-width: 320px;
+  background-color: @body_background_color;
+  color: @text_color;
+  overflow-x: hidden;
+}
+h1, h2, h3, h4, h5, h6 {margin: 0;padding: 0;}
+ul, ol {padding: 0;margin: 0;}
+li {list-style: none;}
+a, a:hover, a:focus {text-decoration: none;}
+/**************************************************************
+*                                                             *
+*                            TITLE                            *
+*                                                             *
+**************************************************************/
+.section-title {
+	text-align: center;
+	.section-tittle__wrapper {
+	  position: relative;
+		h2 {
+			.font('Montserrat',91px,900);
+			line-height: 88px;
+			margin: 0;
+			padding: 0;
+			text-transform: uppercase;
+			color: @standart-title-h2_color;
+		}
+		p.section-title__sub-title {
+			position: absolute;
+			bottom: 0;
+			left: 50%;
+			.font('Montserrat',36px,700);
+			text-transform: uppercase;
+			line-height: 36px;
+			margin: 0;
+			padding: 0;
+			color: @standart-title-subtitle_color;
+			transform: translateX(-50%);
+		}
+	}
+	p.section-title__description {
+		.font('Muli',16px,400);
+		color: @standart-title-description_color;
+	}
+  // Dark title
+  &.dark-version-title {
+    .section-tittle__wrapper {
+    	h2 { color: @dark-title-h2_color; }
+    	p.section-title__sub-title { color: @dark-title-subtitle_color; }
+    }
+    p.section-title__description { color: @dark-title-description_color; }
+  }
+  // White title
+  &.white-version-title {
+    .section-tittle__wrapper {
+    	h2 { color: @white-title-h2_color; }
+    	p.section-title__sub-title { color: @white-title-subtitle_color; }
+    }
+    p.section-title__description { color: @white-title-description_color; }
+  }
+}
+/** RESPONSIVE TITLE **/
+/** 1200px **/
+@media screen and (max-width: 1200px){
+  .section-title {
+    .section-tittle__wrapper {
+      h2 {
+        font-size: 61px;
+        line-height: 84px;
+      }
+      p.section-title__sub-title { font-size: 26px; }
+    }
+  	p.section-title__description {}
+  }
+}
+/** END**/
+
+/** 992px **/
+@media screen and (max-width: 992px){
+  .section-title {
+    .section-tittle__wrapper {
+      h2 {
+        font-size: 50px;
+        line-height: 55px;
+      }
+      p.section-title__sub-title {
+        font-size: 18px;
+        position: relative;
+      }
+    }
+  	p.section-title__description {}
+  }
+}
+/** END**/
+
+/** 768px **/
+@media screen and (max-width: 768px){
+  .section-title {
+    .section-tittle__wrapper {
+      h2 {
+        font-size: 30px;
+        line-height: 35px;
+        color: @responsive-color;
+      }
+      p.section-title__sub-title {}
+    }
+  	p.section-title__description {
+      width: 90%;
+      margin: auto;
+    }
+  }
+  &.dark-version-title {
+    .section-tittle__wrapper {
+    	h2 { color: @responsive-color; }
+    }
+  }
+}
+/** END**/
+/**************************************************************
+*                                                             *
+*                 BUTTONS ANIMATION                           *
+*                                                             *
+**************************************************************/
+/**
+    BUTTON MAEVEL STYLE ONE-STANDART *
+*/
+button:focus, button:active { outline: none !important; } // Reset outline
+.marvel-btn {
+	position: relative;
+	.font(Montserrat, 16px, 700);
+	line-height: 16px;
+	padding: 20px 40px;
+	box-sizing: border-box;
+	border: none;
+}
+/** HEADER BUTTON  animation-one     **/
+.btn-animation-one {
+	text-transform: uppercase;
+	background-color: transparent;
+	color: @button_text_color;
+  transition: 0.3s;
+	&:focus { outline: none; }
+  &:hover,&:focus {
+    color: @button_text_color--hover;
+  }
+}
+/** ANIMATION ORIGN  (top-right to bottom-left) **/
+.btn-animation-one:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: @accent_color_one;
+	z-index: -1;
+	transition: transform 0.5s;
+	transform-origin: bottom right;
+	transform: scale(0);
+}
+.btn-animation-one:hover:before {
+	transition: transform 0.5s;
+	transform-origin: top left;
+	transform: scale(1);
+}
+.btn-animation-one:after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: transparent;
+	border: 1px solid @text_color;
+	box-sizing: border-box;
+	z-index: 1;
+	transition: transform 0.5s;
+	transform-origin: top left;
+}
+.btn-animation-one:hover:after {
+	transition: transform 0.5s;
+	transform-origin: bottom right;
+	transform: scale(0);
+}
+/** REVERCE_RIGHT_TOP ANIMATION ORIGN  (top-right to bottom-left) **/
+/*start position back box background-color*/
+.btn-animation-one.right-top:before { transform-origin: bottom left; }
+/*direction anmation back box*/
+.btn-animation-one.right-top:hover:before { 	transform-origin: top right; }
+/*start position front box border effect*/
+.btn-animation-one.right-top:after { 	transform-origin: top right; }
+/*direction anmation front box border effect*/
+.btn-animation-one.right-top:hover:after { 	transform-origin: bottom left; }
+/** REVERCE_RIGHT_BOTTOM ANIMATION ORIGN  (bottom-right to top-left) **/
+/*start position back box background-color effect*/
+.btn-animation-one.right-bottom:before { transform-origin: top left; }
+/*direction anmation back box*/
+.btn-animation-one.right-bottom:hover:before { 	transform-origin: bottom right; }
+/*start position front box border effect*/
+.btn-animation-one.right-bottom:after { 	transform-origin: bottom right; }
+/*direction anmation front box border effect*/
+.btn-animation-one.right-bottom:hover:after { 	transform-origin: top left; }
+/** REVERCE_LEFT_BOTTOM ANIMATION ORIGN  (bottom-left to top-right) **/
+/*start position back box background-color effect*/
+.btn-animation-one.left-bottom:before { transform-origin: top right; }
+/*direction anmation back box*/
+.btn-animation-one.left-bottom:hover:before { 	transform-origin: bottom left; }
+/*start position front box border effect*/
+.btn-animation-one.left-bottom:after { 	transform-origin: bottom left; }
+/*direction anmation front box border effect*/
+.btn-animation-one.left-bottom:hover:after { 	transform-origin: top right; }

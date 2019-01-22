@@ -1,0 +1,169 @@
+/**************************************************************
+*                                                             *
+*                   OTHER DECORATION BLOCK                    *
+*                                                             *
+**************************************************************/
+#secondCallToAction {
+	background: url('../../img/call-to-action-bottom/background.jpg')no-repeat;
+	background-size: cover;
+	background-position: right top;
+	padding: 110px 0 105px;
+	text-align: center;
+	color: #fff;
+}
+/**************************************************************
+*                                                             *
+*                            TITLE                            *
+*                                                             *
+**************************************************************/
+#secondCallToAction .coll-to-action__title {
+	h2 {
+		.font('Montserrat',44px,700);
+		line-height: 44px;
+		text-transform: uppercase;
+		margin-bottom: 12px;
+		color: #fdfdfd;
+	}
+	p {
+		.font('Muli',16px,400);
+		line-height: 26px;
+		width: 68%;
+		margin: auto;
+		margin-bottom: 108px;
+	}
+}
+/**************************************************************
+*                                                             *
+*                          BUTTONS                            *
+*                                                             *
+**************************************************************/
+#secondCallToAction .call-to-action__buttons {
+	z-index: 2;
+	button.right-top:hover {
+		color: @white;
+	}
+	button.right-top:after {
+		background-color: @accent_color_one;
+		z-index: -1;
+	}
+	button.right-top:before {
+		background-color: @black;
+	}
+	button.right-button:after {
+		background-color: @white;
+		z-index: -1;
+	}
+	button.right-button:before {
+		background-color:  @accent_color_one;
+	}
+}
+/**************************************************************
+*                                                             *
+*                      RESPONSIVE                             *
+*                                                             *
+**************************************************************/
+/** 1200px **/
+@media screen and (max-width: 1200px){
+
+	/** OTHER **/
+	#secondCallToAction {
+		padding: 80px 0 80px;
+	}
+
+	/** TITLE **/
+	#secondCallToAction .coll-to-action__title {
+		h2 {
+			.font('Montserrat',36px,700);
+			margin-bottom: 33px;
+		}
+		p {
+			margin-bottom: 51px;
+		}
+	}
+
+	/** BUTTONS **/
+	#secondCallToAction .call-to-action__buttons {
+		button {
+			font-size: 14px;
+		}
+	}
+
+}
+/** END **/
+
+/** 992px **/
+@media screen and (max-width: 992px){
+
+	/** OTHER **/
+	#secondCallToAction {
+		padding: 60px 0 60px;
+	}
+
+	/** TITLE **/
+	#secondCallToAction .coll-to-action__title {
+		h2 {
+			.font('Montserrat',30px,700);
+			margin-bottom: 23px;
+		}
+		p {
+			margin-bottom: 31px;
+		}
+	}
+
+	/** BUTTONS **/
+	#secondCallToAction .call-to-action__buttons {
+		button {
+			font-size: 13px;
+		}
+	}
+
+}
+/** END **/
+
+/** 768px **/
+@media screen and (max-width: 768px){
+
+	/** OTHER **/
+	#secondCallToAction {
+		background-position: right 20% top 0;
+	}
+
+	/** TITLE **/
+	#secondCallToAction .coll-to-action__title {
+		h2 {
+			.font('Montserrat',25px,700);
+			margin-bottom: 15px;
+		}
+		p {
+			font-size: 16px;
+			margin-bottom: 31px;
+		}
+	}
+
+	/** BUTTONS **/
+	#secondCallToAction .call-to-action__buttons {
+		button {
+			font-size: 12px;
+			margin-bottom: 25px;
+		}
+		/** left button **/
+		button.btn-second-call-left,
+		button.btn-second-call-right {
+			min-width: auto;
+			min-width: 200px;
+		}
+	}
+
+}
+/** END **/
+
+/** 500px **/
+@media screen and (max-width: 500px){
+
+	/** OTHER **/
+	#secondCallToAction {
+		background-position: right 40% top 0;
+	}
+
+}
+/** END **/
